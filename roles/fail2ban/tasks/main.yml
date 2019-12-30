@@ -15,7 +15,7 @@
     - krb5-workstation
     - openldap-clients
     - policycoreutils-python
-   state: present
+    state: present
 
 - name: 2. installation et configuration du repos epel
   yum:
