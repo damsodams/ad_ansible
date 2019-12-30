@@ -7,8 +7,7 @@
     - sssd
     - realmd
     - oddjob
-    - oddjob
-    - mkhomedir
+    - oddjob-mkhomedir
     - adcli
     - samba-common
     - samba-common-tools
