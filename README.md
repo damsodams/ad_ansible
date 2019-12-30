@@ -1,6 +1,6 @@
 Integration CentOS Domaine ActiveDirectory
 
-### Roles:
-## Fail2Ban :
+## Roles:
+### Fail2Ban :
 
-## Join_domaine:
+### Join_domaine:
