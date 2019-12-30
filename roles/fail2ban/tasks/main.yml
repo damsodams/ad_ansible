@@ -1,11 +1,23 @@
 ---
-   - name: 1. installlation des package de base
-      yum: 
-        name: sssd,realmd,oddjob,oddjob-mkhomedir,adcli,samba-common,samba-common-tools,krb5-workstation,openldap-clients,policycoreutils-python
-        state: present
-
-    - name: 2. installation et configuration du repos epel
-      yum:
+- name: 1. installlation des package de base
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - sssd
+    - realmd
+    - oddjob
+    - oddjob
+    - mkhomedir
+    - adcli
+    - samba-common
+    - samba-common-tools
+    - krb5-workstation
+    - openldap-clients
+    - policycoreutils-python
+   state: present
+- name: 2. installation et configuration du repos epel
+  yum:
         name: epel-release
         state: present
 

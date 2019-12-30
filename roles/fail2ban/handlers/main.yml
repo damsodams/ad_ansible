@@ -1,5 +1,2 @@
 ---
-    - name: restart sssd
-      service:
-        name: sssd
-        state: restarted
+# handlers file for fail2ban
