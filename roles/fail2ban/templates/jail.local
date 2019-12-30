@@ -1,17 +1,45 @@
 [DEFAULT]
+
+
+{% if b2f_bantime is defined %}
 bantime = {{b2f_bantime}}
+{% endif %}
 
+
+
+{% if b2f_findtime is defined %}
 findtime = {{b2f_findtime}}
+{% endif %}
+{% if b2f_maxretry is defined %}
 maxretry = {{b2f_maxretry}}
+{% endif %}
 
+
+
+{% if b2f_ignoreip is defined %}
 ignoreip = {{b2f_ignoreip}}
+{% endif %}
 
+
+{% if b2f_destemail is defined %}
 destemail = {{b2f_destemail}}
+{% endif %}
+{% if b2f_sender is defined %}
 sender = {{b2f_sender}}
+{% endif %}
+{% if b2f_sendername is defined %}
 sendername = {{b2f_sendername}}
+{% endif %}
+{% if b2f_mta is defined %}
 mta = {{b2f_mta}}
+{% endif %}
 
+
+
+{% if b2f_action is defined %}
 action = {{b2f_action}}
+{% endif %}
+
 
 [sshd]
 enabled = true
