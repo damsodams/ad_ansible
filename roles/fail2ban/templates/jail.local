@@ -1,0 +1,17 @@
+[DEFAULT]
+bantime = {{b2f_bantime}}
+
+findtime = {{b2f_findtime}}
+maxretry = {{b2f_maxretry}}
+
+ignoreip = {{b2f_ignoreip}}
+
+destemail = {{b2f_destemail}}
+sender = {{b2f_sender}}
+sendername = {{b2f_sendername}}
+mta = {{b2f_mta}}
+
+action = {{b2f_action}}
+
+[sshd]
+enabled = true

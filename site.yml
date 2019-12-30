@@ -1,3 +1,5 @@
 - hosts: all
   roles:
+    - join_ad
     - fail2ban
+    

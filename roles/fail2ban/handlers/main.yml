@@ -1,2 +1,8 @@
 ---
+- name: restart fail2ban (with service)
+  service:
+    name: fail2ban
+    state: restarted
+  listen: "restart fail2ban"
+  when: ansible_service_mgr != 'systemd'
 # handlers file for fail2ban
