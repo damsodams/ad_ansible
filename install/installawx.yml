@@ -69,7 +69,8 @@
         state: latest
 
     - name: Install maj
-      shell: scl enable rh-python36 bash
+      shell: |
+        scl enable rh-mariadb102
 
     - name: install docker compose
       pip:
