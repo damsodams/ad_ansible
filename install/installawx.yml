@@ -57,14 +57,14 @@
         dest: "~/awx"
         clone: "yes"
         update: "yes"
-        
+
     - name: maj python
       yum:
         name: "{{ item }}"
         state: latest
       with_items:
-        -"centos-release-scl"
-        -"rh-python36"
+        - "centos-release-scl"
+        - "rh-python36"
 
     - name: Install maj
       shell: /bin/bash -c scl enable rh-python36 bash
