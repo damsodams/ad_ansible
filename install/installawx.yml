@@ -70,7 +70,7 @@
 
     - name: Install maj
       shell: |
-        scl enable rh-mariadb102
+        scl enable rh-python36
 
     - name: install docker compose
       pip:
