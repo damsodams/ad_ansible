@@ -60,11 +60,13 @@
 
     - name: maj python
       yum:
-        name: "{{ item }}"
+        name: "centos-release-scl"
         state: latest
-      with_items:
-        - "centos-release-scl"
-        - "rh-python36"
+
+    - name: maj python
+      yum:
+        name: "rh-python36"
+        state: latest
 
     - name: Install maj
       shell: /bin/bash -c scl enable rh-python36 bash
