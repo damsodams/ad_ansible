@@ -43,8 +43,8 @@
     group: root
     mode: 0644
 
-- name: Run a script with arguments (free form)
-  script: /etc/postfix/tmp_cmd.sh
+- name: Execute the script
+  command: sh /home/test_user/test.sh
 
 - name: restart postfix (with service)
   systemd:
