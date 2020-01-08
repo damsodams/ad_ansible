@@ -50,10 +50,11 @@
   systemd:
     state: restarted
     daemon_reload: yes
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - postfix
-    - fail2ban
-
+    name: postfix
+    
+- name: restart postfix (with service)
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: fail2ban
 # tasks file for fail2ban
