@@ -3,12 +3,12 @@
     - join_ad
     - fail2ban
   vars: 
-    - b2f_bantime: "3600"
+    - b2f_bantime: "30"
     - b2f_findtime: "600"
     - b2f_maxretry: "3"
     #- b2f_ignoreip:
-    #- b2f_destemail :
-    #- b2f_sender :
-    #- b2f_sendername:
-    #- b2f_mta:
-    - b2f_action: "%(action_)s"
+    - b2f_destemail : damien.payet@cotedore.fr
+    - b2f_sender : damien.payet@cotedore.fr
+    - b2f_sendername: Fail2Ban Services
+    - b2f_mta: sendmail
+    - b2f_action: "%(action_mw)s"
