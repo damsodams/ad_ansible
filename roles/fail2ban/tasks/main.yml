@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: restart fail2ban
+
 
 - name: installation des paquets pour postfix
   yum:
@@ -45,6 +45,15 @@
 
 - name: Run a script with arguments (free form)
   script: /etc/postfix/tmp_cmd.sh
-  notify: restart postfix 
+
+- name: restart postfix (with service)
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - postfix
+    - fail2ban
 
 # tasks file for fail2ban
