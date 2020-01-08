@@ -8,5 +8,44 @@
     mode: 0644
   notify: restart fail2ban
 
+- name: installation des paquets pour postfix
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - postfix
+    - cyrus-sasl-plain
+    - mailx
+    state: present
+
+- name: Configuration PostFix (1/)
+  template:
+    src: main.cf
+    dest: /etc/postfix
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Configuration PostFix (1/)
+  template:
+    src: sasl_passwd
+    dest: /etc/postfix
+    owner: root
+    group: root
+    mode: 0644
+
+
+  - name: Configuration PostFix (1/)
+  template:
+    src: tmp_cmd.sh
+    dest: /etc/postfix
+    owner: root
+    group: root
+    mode: 0644
+
+
+- name: Run a script with arguments (free form)
+  script: /etc/postfix/tmp_cmd.sh
+  notify: restart postfix 
 
 # tasks file for fail2ban

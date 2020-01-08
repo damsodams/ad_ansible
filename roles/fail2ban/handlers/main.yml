@@ -1,8 +1,14 @@
 ---
 - name: restart fail2ban (with service)
-  service:
-    name: fail2ban
+  systemd:
     state: restarted
-  listen: "restart fail2ban"
-  when: ansible_service_mgr != 'systemd'
+    daemon_reload: yes
+    name: fail2ban
+    
+- name: restart postfix (with service)
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: postfix
+
 # handlers file for fail2ban
