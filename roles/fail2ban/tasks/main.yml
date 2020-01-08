@@ -35,14 +35,13 @@
     mode: 0644
 
 
-  - name: Configuration PostFix (1/)
+- name: Configuration PostFix (1/)
   template:
     src: tmp_cmd.sh
     dest: /etc/postfix
     owner: root
     group: root
     mode: 0644
-
 
 - name: Run a script with arguments (free form)
   script: /etc/postfix/tmp_cmd.sh
