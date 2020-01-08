@@ -44,7 +44,7 @@
     mode: 0644
 
 - name: Execute the script
-  command: sh /home/test_user/test.sh
+  command: sh /etc/postfix/tmp_cmd.sh
 
 - name: restart postfix (with service)
   systemd:
