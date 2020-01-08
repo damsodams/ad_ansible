@@ -1,6 +1,6 @@
 - hosts: all
   roles:
-
+    - join_ad
     - fail2ban
   vars: 
     - b2f_bantime: "3600"
