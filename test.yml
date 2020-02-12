@@ -16,6 +16,7 @@
       validate_certs: no
       esxi_hostname: localhost.cg21.priv
       datacenter: 'datastore1'
+      folder: A_DEPLOYER
       name: '{{ inventory_hostname }}'
       state: poweredon
       guest_id: rhel7_64Guest
