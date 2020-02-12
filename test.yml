@@ -15,7 +15,7 @@
       password: 'rootroot123!'
       validate_certs: no
       esxi_hostname: localhost.cg21.priv
-      folder: A_DEPLOYER
+      folder: vm
       name: '{{ inventory_hostname }}'
       state: poweredon
       guest_id: rhel7_64Guest
