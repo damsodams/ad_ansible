@@ -15,8 +15,8 @@
       password: 'rootroot123!'
       validate_certs: no
       esxi_hostname: localhost.cg21.priv
-      folder: vm
-      name: '{{ inventory_hostname }}'
+      folder: /ha-datacenter/vm
+      name: 'mavm'
       state: poweredon
       guest_id: rhel7_64Guest
       annotation: "test - {{ creationdate }}"
