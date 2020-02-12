@@ -15,7 +15,6 @@
       password: 'rootroot123!'
       validate_certs: no
       esxi_hostname: localhost.cg21.priv
-      datacenter: 'datastore1'
       folder: A_DEPLOYER
       name: '{{ inventory_hostname }}'
       state: poweredon
