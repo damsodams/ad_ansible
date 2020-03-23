@@ -1,9 +1,11 @@
 ---
+- name: create backup folder
+  shell: mkdir /tmp/repos
 - name: save older configuration
   copy:
     src: /etc/yum.repos.d
-    dest: /tmp/
-- name: create new configuration file
-  file:
-        path: "/etc/yum.repo.d/remote.repos"
-        state: touch
+    dest: /tmp/repos
+- name: delete older file
+  shell: rm /etc/yum.repos.d/*
+- name: Create new repos configuration file
+  shell: touch /etc/yum.repos.d/remote.repo
