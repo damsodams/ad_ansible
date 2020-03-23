@@ -1,0 +1,9 @@
+---
+- name: save older configuration
+  copy:
+    src: /etc/yum.repos.d
+    dest: /tmp/
+- name: create new configuration file
+  file:
+        path: "/etc/yum.repo.d/remote.repos"
+        state: touch
