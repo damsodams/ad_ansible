@@ -7,5 +7,10 @@
     dest: /tmp/repos
 - name: delete older file
   shell: rm /etc/yum.repos.d/*
-- name: Create new repos configuration file
-  shell: touch /etc/yum.repos.d/remote.repo
+- name: copy configuration
+  template:
+    src: remote.repo
+    dest: /etc/yum.repos.d/remote.repo
+    owner: root
+    group: root
+    mode: 0644
