@@ -1,8 +1,8 @@
 - hosts: all
   roles:
    # - join_ad
-   # - fail2ban
-   - cg21_repos
+    - fail2ban
+   #- cg21_repos
   vars: 
     - b2f_bantime: "30"
     - b2f_findtime: "600"
